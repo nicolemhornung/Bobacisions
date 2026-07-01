@@ -41,7 +41,22 @@
   .boba-img {
     width: 200px;
     image-rendering: pixelated;
+    animation: float-img 3s ease-in-out infinite;
   }
+
+  @keyframes float-img {
+      0% {
+          transform: translateY(0px);
+      }
+      50% {
+          transform: translateY(-20px);
+      }
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
+
 
   .input-card {
     background: var(--accent-light);
