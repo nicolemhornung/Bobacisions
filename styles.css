@@ -1,0 +1,163 @@
+:root {
+    --bg: #fff7fb;
+    --accent: #ffb6d9;
+    --accent-light: #ffe3f3;
+    --text: #333333;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }
+
+  .boba-img {
+    width: 200px;
+    image-rendering: pixelated;
+  }
+
+  .input-card {
+    background: var(--accent-light);
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .input-card label {
+    font-weight: bold;
+  }
+
+  .input-card input {
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .input-card button {
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  .input-card button:hover {
+    background: #ff9ccd;
+  }
+
+  #errorMessage {
+    min-height: 20px;
+  }
+
+  #results {
+    margin-top: 40px;
+  }
+
+  .results-title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+  }
+
+  th {
+    background: var(--accent-light);
+    padding: 12px;
+  }
+
+  td {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+
+  #tagFilters {
+    max-height: 220px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #tagFilters h4 {
+    margin-top: 10px;
+    color: #555555;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  #tagFilters label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+  }
+
+  #tagFilters input[type="checkbox"] {
+    accent-color: #ff9ce8;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #randomBtn {
+    background: #d18ba1;
+  }
+
+  #randomBtn:hover {
+    background: #97576b;
+  }
+
+  #clearFiltersBtn {
+    background: #e8e8e8;
+  }
+
+  #clearFiltersBtn:hover {
+    background: #d9d9d9;
+  }
