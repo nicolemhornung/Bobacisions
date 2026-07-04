@@ -335,7 +335,7 @@ function renderResults(matches) {
         <th>Drink</th>
         <th>Chain</th>
         <th>Series</th>
-        <th>Match %</th>
+        <th>%</th>
       </tr>
     </thead>
     <tbody>
