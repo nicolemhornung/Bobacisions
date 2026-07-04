@@ -6,11 +6,39 @@ const resultsDiv = document.getElementById("results");
 const clearFiltersBtn = document.getElementById("clearFiltersBtn");
 const randomBtn = document.getElementById("randomBtn");
 
-
 randomBtn.addEventListener("click", randomDrink);
 
+document.addEventListener('DOMContentLoaded', () => {
+  const bobaBarGroup = document.getElementById('bobaBarCheckboxGroup');
+
+  // Get the list of chains from your chains object
+  const chainNames = Object.keys(chains);
+
+  chainNames.forEach(chain => {
+    // Create the label and input elements
+    const label = document.createElement('label');
+    const checkbox = document.createElement('input');
+
+    checkbox.type = 'checkbox';
+    checkbox.name = 'bobaBar';
+    checkbox.value = chain; // Keeps the original name for your data matching
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(` ${chain}`));
+
+    bobaBarGroup.appendChild(label);
+  });
+});
+
+// Helper function to get selected tags
 function getSelectedTags() {
-  return [...document.querySelectorAll("#tagFilters input:checked")]
+  return [...document.querySelectorAll(".boba-dropdown input:checked")]
+    .map(box => box.value);
+}
+
+// Helper function to get selected boba bars
+function getSelectedBars() {
+  return [...document.querySelectorAll('input[name="bobaBar"]:checked')]
     .map(box => box.value);
 }
 
@@ -58,8 +86,7 @@ function recommendations() {
 
   errorMessage.textContent = "";
 
-  let matches =
-  similarityMatch(matchedChain, matchedDrink);
+  let matches = similarityMatch(matchedChain, matchedDrink);
 
   matches = filterRecommendations(matches);
 
@@ -174,8 +201,15 @@ function similarityMatch(
   if (!tags) return [];
 
   const recommendations = [];
+  const selectedBars = getSelectedBars();
 
-  for (const [chainName, series] of Object.entries(chains)) {
+  // If checkboxes are checked, use only those bars. Otherwise, search everything.
+  const chainsToScan = selectedBars.length > 0 ? selectedBars : Object.keys(chains);
+
+  chainsToScan.forEach(chainName => {
+    const series = chains[chainName];
+    if (!series) return;
+
     for (const [seriesName, drinks] of Object.entries(series)) {
       drinks.forEach(drink => {
 
@@ -213,7 +247,7 @@ function similarityMatch(
         }
       });
     }
-  }
+  });
 
   recommendations.sort(
     (a, b) => b.similarity - a.similarity
@@ -222,18 +256,24 @@ function similarityMatch(
   return recommendations.slice(0, topSimilar);
 }
 
-clearFiltersBtn.addEventListener("click", clearFilters);
+clearFiltersBtn.addEventListener('click', () => {
 
-function clearFilters() {
+  const allCheckboxes = document.querySelectorAll('.boba-dropdown input[type="checkbox"], .bardropdown input[type="checkbox"]');
+  allCheckboxes.forEach(checkbox => {
+    checkbox.checked = false;
+  });
 
-  document
-    .querySelectorAll("#tagFilters input")
-    .forEach(box => box.checked = false);
-
-}
+  const allDropdowns = document.querySelectorAll('.boba-dropdown, .bardropdown');
+  allDropdowns.forEach(dropdown => {
+    dropdown.removeAttribute('open');
+  });
+  chainInput.value = "";
+  drinkInput.value = "";
+  resultsDiv.innerHTML = '';
+  errorMessage.textContent = '';
+});
 
 function randomDrink() {
-
   const userChain = chainInput.value.trim();
 
   if (!userChain) {
@@ -253,45 +293,35 @@ function randomDrink() {
   const drinks = [];
 
   for (const [seriesName, series] of Object.entries(chains[matchedChain])) {
-
     series.forEach(drink => {
-
       drinks.push({
         ...drink,
         series: seriesName
       });
-
     });
-
   }
 
   const selectedTags = getSelectedTags();
-
   let filtered = drinks;
 
   if (selectedTags.length) {
-
     filtered = drinks.filter(drink =>
       selectedTags.every(tag =>
         drink.tags.includes(tag)
       )
     );
-
   }
 
   if (!filtered.length) {
-
     errorMessage.textContent =
       "No drinks match those filters.";
-
     return;
-
   }
 
   const random =
     filtered[Math.floor(Math.random() * filtered.length)];
 
-    resultsDiv.innerHTML = `
+  resultsDiv.innerHTML = `
     <h2 class="results-title">Random Drink Selection . . .</h2>
 
     <table class="random-table">

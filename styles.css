@@ -58,8 +58,6 @@
       }
   }
 
-
-
   .input-card {
     background: var(--accent-light);
     padding: 25px;
@@ -166,18 +164,22 @@
   }
 
   #randomBtn {
-    background: #f6acc4;
+    background: #ff93bc;
     color: black;
 
   }
 
   #randomBtn:hover {
-    background: #bd8194;
+    background: #d67b9e;
   }
 
   #clearFiltersBtn {
-    background: #e8e8e8;
+    background: #b6a07d;
     color: black;
+  }
+
+  #clearFiltersBtn:hover {
+    background: #514838;
   }
 
   #searchBtn {
@@ -188,10 +190,6 @@
   #searchBtn:hover {
     background: #996388;
     color: black;
-  }
-
-  #clearFiltersBtn:hover {
-    background: #d9d9d9;
   }
 
   /* Two-column layout */
@@ -270,4 +268,171 @@
   height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+/* Container element */
+.boba-dropdown {
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+/* Turn the Summary element into a button */
+.dropdown-btn {
+  background-color: #f9c5ee; /* Boba Brown Button Background */
+  color: #000000;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.2s ease, border-radius 0.2s ease;
+}
+
+/* Hover effect on the button */
+.dropdown-btn:hover {
+  background-color: #e7c4e8;
+}
+
+/* Custom indicator arrow inside the button */
+.dropdown-btn::after {
+  content: '🧋';
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* Flatten bottom corners when dropdown is active */
+.boba-dropdown[open] .dropdown-btn {
+  background-color: #f9c5ee;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Rotate the arrow up when open */
+.boba-dropdown[open] .dropdown-btn::after {
+  transform: rotate(180deg);
+}
+
+/* The checkbox container box below the button */
+.dropdown-content {
+  background-color: #fff;
+  border: 2px solid #f9c5ee;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtitles for checkbox groups */
+.dropdown-content h4 {
+  margin: 15px 0 8px 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #d1d1d1;
+  text-decoration: underline;
+}
+
+.dropdown-content h4:first-of-type {
+  margin-top: 0;
+}
+
+/* Checkbox layout groups */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #cca47c;
+}
+
+/* Container Box for the Boba Bar Dropdown */
+.bardropdown {
+  width: 100%;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+/* Turns the summary block into a clickable styled button */
+.bar-btn {
+  background-color: #cca47c;
+  color: #000000;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.2s ease, border-radius 0.2s ease;
+}
+
+/* Hover feedback */
+.bar-btn:hover {
+  background-color: #b58f67;
+}
+
+/* Custom dropdown indicator arrow */
+.bar-btn::after {
+  content: '🧋';
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* Flattens bottom corners smoothly when the card drops down */
+.bardropdown[open] .bar-btn {
+  background-color: #b58f67;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Flips the arrow upside down when open */
+.bardropdown[open] .bar-btn::after {
+  transform: rotate(180deg);
+}
+
+/* The checkbox scroll-box container card below the button */
+.bar-content {
+  background-color: #fff;
+  border: 2px solid #b58f67;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bar-content h4 {
+  margin: 15px 0 8px 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+
+.bar-content h4:first-of-type {
+  margin-top: 0;
 }

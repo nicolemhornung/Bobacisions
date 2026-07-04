@@ -44,74 +44,116 @@
         placeholder="Enter drink"
       />
 
-      <h4>Filter by Tags</h4>
+      <details class="boba-dropdown">
+        <summary class="dropdown-btn">Flavor Profiles</summary>
 
-      <div id="tagFilters">
+        <div class="dropdown-content">
+          <h4>Drink Type</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="milk-tea"> Milk Tea</label>
+            <label><input type="checkbox" value="fruit-tea"> Fruit Tea</label>
+            <label><input type="checkbox" value="pure-tea"> Pure Tea</label>
+            <label><input type="checkbox" value="smoothie-slush"> Smoothie / Slush</label>
+            <label><input type="checkbox" value="coffee"> Coffee</label>
+            <label><input type="checkbox" value="brown-sugar-series"> Brown Sugar Series</label>
+          </div>
 
-        <h4>Drink Type</h4>
-        <label><input type="checkbox" value="milk-tea"> Milk Tea</label>
-        <label><input type="checkbox" value="fruit-tea"> Fruit Tea</label>
-        <label><input type="checkbox" value="pure-tea"> Pure Tea</label>
-        <label><input type="checkbox" value="smoothie-slush"> Smoothie / Slush</label>
-        <label><input type="checkbox" value="coffee"> Coffee</label>
-        <label><input type="checkbox" value="brown-sugar-series"> Brown Sugar Series</label>
+          <h4>Tea Base</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="green-tea"> Green Tea</label>
+            <label><input type="checkbox" value="black-tea"> Black Tea</label>
+            <label><input type="checkbox" value="oolong"> Oolong</label>
+            <label><input type="checkbox" value="matcha"> Matcha</label>
+            <label><input type="checkbox" value="jasmine"> Jasmine</label>
+            <label><input type="checkbox" value="herbal-floral"> Herbal / Floral</label>
+          </div>
 
-        <h4>Tea Base</h4>
-        <label><input type="checkbox" value="green-tea"> Green Tea</label>
-        <label><input type="checkbox" value="black-tea"> Black Tea</label>
-        <label><input type="checkbox" value="oolong"> Oolong</label>
-        <label><input type="checkbox" value="matcha"> Matcha</label>
-        <label><input type="checkbox" value="jasmine"> Jasmine</label>
-        <label><input type="checkbox" value="herbal-floral"> Herbal / Floral</label>
+          <h4>Flavor Profile</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="sweet"> Sweet</label>
+            <label><input type="checkbox" value="savory-sweet"> Savory Sweet</label>
+            <label><input type="checkbox" value="fruity"> Fruity</label>
+            <label><input type="checkbox" value="floral"> Floral</label>
+            <label><input type="checkbox" value="nutty"> Nutty</label>
+            <label><input type="checkbox" value="chocolatey"> Chocolatey</label>
+            <label><input type="checkbox" value="caramel"> Caramel</label>
+            <label><input type="checkbox" value="taro"> Taro</label>
+            <label><input type="checkbox" value="vanilla"> Vanilla</label>
+            <label><input type="checkbox" value="coconut"> Coconut</label>
+            <label><input type="checkbox" value="citrusy"> Citrusy</label>
+            <label><input type="checkbox" value="berry"> Berry</label>
+            <label><input type="checkbox" value="tropical"> Tropical</label>
+            <label><input type="checkbox" value="honeyed"> Honeyed</label>
+          </div>
 
-        <h4>Flavor Profile</h4>
-        <label><input type="checkbox" value="sweet"> Sweet</label>
-        <label><input type="checkbox" value="savory-sweet"> Savory Sweet</label>
-        <label><input type="checkbox" value="fruity"> Fruity</label>
-        <label><input type="checkbox" value="floral"> Floral</label>
-        <label><input type="checkbox" value="nutty"> Nutty</label>
-        <label><input type="checkbox" value="chocolatey"> Chocolatey</label>
-        <label><input type="checkbox" value="caramel"> Caramel</label>
-        <label><input type="checkbox" value="taro"> Taro</label>
-        <label><input type="checkbox" value="vanilla"> Vanilla</label>
-        <label><input type="checkbox" value="coconut"> Coconut</label>
-        <label><input type="checkbox" value="citrusy"> Citrusy</label>
-        <label><input type="checkbox" value="berry"> Berry</label>
-        <label><input type="checkbox" value="tropical"> Tropical</label>
-        <label><input type="checkbox" value="honeyed"> Honeyed</label>
+          <h4>Tastes...</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="earthy"> Earthy</label>
+            <label><input type="checkbox" value="smoky"> Smoky</label>
+            <label><input type="checkbox" value="roasted-toasty"> Roasted</label>
+            <label><input type="checkbox" value="malty"> Malty</label>
+            <label><input type="checkbox" value="vegetal-grassy"> Grassy</label>
+            <label><input type="checkbox" value="warm-spiced"> Warm Spiced</label>
+            <label><input type="checkbox" value="bittersweet"> Bittersweet</label>
+            <label><input type="checkbox" value="tart"> Tart</label>
+            <label><input type="checkbox" value="bold"> Bold</label>
+            <label><input type="checkbox" value="delicate"> Delicate</label>
+          </div>
 
-        <h4>Tastes...</h4>
-        <label><input type="checkbox" value="earthy"> Earthy</label>
-        <label><input type="checkbox" value="smoky"> Smoky</label>
-        <label><input type="checkbox" value="roasted-toasty"> Roasted</label>
-        <label><input type="checkbox" value="malty"> Malty</label>
-        <label><input type="checkbox" value="vegetal-grassy"> Grassy</label>
-        <label><input type="checkbox" value="warm-spiced"> Warm Spiced</label>
-        <label><input type="checkbox" value="bittersweet"> Bittersweet</label>
-        <label><input type="checkbox" value="tart"> Tart</label>
-        <label><input type="checkbox" value="bold"> Bold</label>
-        <label><input type="checkbox" value="delicate"> Delicate</label>
+          <h4>Texture Profile</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="creamy"> Creamy</label>
+            <label><input type="checkbox" value="velvety-foam"> Velvety Foam</label>
+            <label><input type="checkbox" value="salty-milk-foam"> Salty Milk Foam</label>
+            <label><input type="checkbox" value="icy"> Icy</label>
+            <label><input type="checkbox" value="light-refreshing"> Light & Refreshing</label>
+            <label><input type="checkbox" value="chewy-pearls"> Chewy Pearls</label>
+            <label><input type="checkbox" value="silky-smooth"> Silky Smooth</label>
+            <label><input type="checkbox" value="frothy"> Frothy</label>
+            <label><input type="checkbox" value="juicy"> Juicy</label>
+          </div>
 
-        <h4>Texture Profile</h4>
-        <label><input type="checkbox" value="creamy"> Creamy</label>
-        <label><input type="checkbox" value="velvety-foam"> Velvety Foam</label>
-        <label><input type="checkbox" value="salty-milk-foam"> Salty Milk Foam</label>
-        <label><input type="checkbox" value="icy"> Icy</label>
-        <label><input type="checkbox" value="light-refreshing"> Light & Refreshing</label>
-        <label><input type="checkbox" value="chewy-pearls"> Chewy Pearls</label>
-        <label><input type="checkbox" value="silky-smooth"> Silky Smooth</label>
-        <label><input type="checkbox" value="frothy"> Frothy</label>
-        <label><input type="checkbox" value="juicy"> Juicy</label>
+          <h4>Other Tags</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="balanced"> Balanced</label>
+            <label><input type="checkbox" value="rich-indulgent"> Rich & Indulgent</label>
+            <label><input type="checkbox" value="best-selling"> Best Selling</label>
+            <label><input type="checkbox" value="signature"> Signature</label>
+            <label><input type="checkbox" value="dessert-like"> Dessert-like</label>
+          </div>
+        </div>
+      </details>
 
-        <h4>Other tags</h4>
-        <label><input type="checkbox" value="balanced"> Balanced</label>
-        <label><input type="checkbox" value="rich-indulgent"> Rich & Indulgent</label>
-        <label><input type="checkbox" value="best-selling"> Best Selling</label>
-        <label><input type="checkbox" value="signature"> Signature</label>
-        <label><input type="checkbox" value="dessert-like"> Dessert-like</label>
+      <!-- Boba Bar Dropdown Box Component -->
+      <details class="bardropdown">
+        <summary class="bar-btn">Specific Boba Bars</summary>
 
-      </div>
-
+        <div class="bar-content">
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="bobaBar" value="Gong Cha"> Gong Cha</label>
+            <label><input type="checkbox" name="bobaBar" value="Kung Fu Tea"> Kung Fu Tea</label>
+            <label><input type="checkbox" name="bobaBar" value="CoCo Fresh Tea & Juice"> CoCo Fresh Tea & Juice</label>
+            <label><input type="checkbox" name="bobaBar" value="Sharetea"> Sharetea</label>
+            <label><input type="checkbox" name="bobaBar" value="Chatime"> Chatime</label>
+            <label><input type="checkbox" name="bobaBar" value="Happy Lemon"> Happy Lemon</label>
+            <label><input type="checkbox" name="bobaBar" value="Tiger Sugar"> Tiger Sugar</label>
+            <label><input type="checkbox" name="bobaBar" value="Boba Guys"> Boba Guys</label>
+            <label><input type="checkbox" name="bobaBar" value="Ten Ren's Tea"> Ten Ren's Tea</label>
+            <label><input type="checkbox" name="bobaBar" value="The Alley"> The Alley</label>
+            <label><input type="checkbox" name="bobaBar" value="Yi Fang"> Yi Fang</label>
+            <label><input type="checkbox" name="bobaBar" value="Kung Fu Tea"> Kung Fu Tea</label>
+            <label><input type="checkbox" name="bobaBar" value="Xing Fu Tang"> Xing Fu Tang</label>
+            <label><input type="checkbox" name="bobaBar" value="HEYTEA"> HEYTEA</label>
+            <label><input type="checkbox" name="bobaBar" value="Machi Machi"> Machi Machi</label>
+            <label><input type="checkbox" name="bobaBar" value="Molly Tea"> Molly Tea</label>
+            <label><input type="checkbox" name="bobaBar" value="7 Leaves Cafe"> 7 Leaves Cafe</label>
+            <label><input type="checkbox" name="bobaBar" value="Tastea"> Tastea</label>
+            <label><input type="checkbox" name="bobaBar" value="Feng Cha"> Feng Cha</label>
+            <label><input type="checkbox" name="bobaBar" value="Sunright Tea Studio"> Sunright Tea Studio</label>
+            <label><input type="checkbox" name="bobaBar" value="TP Tea"> TP Tea</label>
+          </div>
+        </div>
+      </details>
 
 
       <div id="errorMessage"></div>
