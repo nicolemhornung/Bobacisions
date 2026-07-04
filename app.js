@@ -291,10 +291,10 @@ function randomDrink() {
   const random =
     filtered[Math.floor(Math.random() * filtered.length)];
 
-  resultsDiv.innerHTML = `
+    resultsDiv.innerHTML = `
     <h2 class="results-title">Random Drink Selection . . .</h2>
 
-    <table>
+    <table class="random-table">
       <thead>
         <tr>
           <th>Drink</th>
@@ -319,13 +319,13 @@ function renderResults(matches) {
 
   if (!matches.length) {
     errorMessage.textContent =
-      "No similar drinks found.";
+      "No matches found.";
     return;
   }
 
   const title = document.createElement("h2");
   title.className = "results-title";
-  title.textContent = "Your Curated Menu:";
+  title.textContent = "Your Personalized, Curated Menu:";
 
   const table = document.createElement("table");
 

@@ -1,7 +1,3 @@
-// chains.js — tagged boba chain / series / drink dataset
-// 20 US-present chains · 323 drinks · 10 tags each from a fixed 50-tag vocabulary.
-// Browser: include before app.js -> `chains` is available globally.
-
 const chains = {
     "Gong Cha": {
       "Milk Foam Series": [

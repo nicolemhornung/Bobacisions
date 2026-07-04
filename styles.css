@@ -2,7 +2,7 @@
     --bg: #fff7fb;
     --accent: #ffb6d9;
     --accent-light: #ffe3f3;
-    --text: #333333;
+    --text: #000000;
   }
 
   * {
@@ -25,7 +25,9 @@
   }
 
   .hero {
+    color: rgb(0, 0, 0);
     text-align: center;
+    font-family: "Fredoka", sans-serif;
   }
 
   .hero h1 {
@@ -34,7 +36,7 @@
   }
 
   .hero p {
-    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
   }
 
@@ -60,8 +62,6 @@
 
   .input-card {
     background: var(--accent-light);
-    max-width: 500px;
-    margin: 30px auto;
     padding: 25px;
     border-radius: 18px;
 
@@ -104,6 +104,7 @@
   }
 
   .results-title {
+    font-family: "Fredoka", sans-serif;
     text-align: center;
     margin-bottom: 15px;
   }
@@ -139,9 +140,10 @@
 
   #tagFilters h4 {
     margin-top: 10px;
-    color: #555555;
+    color: #000000;
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: underline;
   }
 
   #tagFilters label {
@@ -153,12 +155,6 @@
 
   #tagFilters input[type="checkbox"] {
     accent-color: #ff9ce8;
-  }
-
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
   }
 
   #randomBtn {
@@ -176,3 +172,71 @@
   #clearFiltersBtn:hover {
     background: #d9d9d9;
   }
+
+  /* Two-column layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+
+/* Curated menu card */
+.menu-card {
+  background: var(--accent-light);
+  padding: 25px;
+  border-radius: 18px;
+}
+
+
+/* Buttons in one row */
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+
+/* Results spacing */
+#results {
+  margin-top: 15px;
+}
+
+
+/* Mobile version */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.random-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.random-table th,
+.random-table td {
+  width: 33.33%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.random-table td {
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keeps long drink names from changing layout */
+.random-table td {
+  white-space: nowrap;
+}

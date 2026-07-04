@@ -49,8 +49,3 @@ oddCount.forEach(s => console.log("  - " + s));
 console.log(`\nINVALID/DUPLICATE entries: ${invalid.length}`);
 invalid.forEach(s => console.log("  ✗ " + s));
 console.log(invalid.length === 0 ? "\n✅ ALL TAGS VALID" : "\n❌ FIX REQUIRED");
-
-function getSelectedTags() {
-    return [...document.querySelectorAll("#tagFilters input:checked")]
-        .map(box => box.value);
-}

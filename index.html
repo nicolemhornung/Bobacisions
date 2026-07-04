@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bobacisions!</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="container">
 
     <div class="hero">
-      <h1>Welcome to Bobacisions V.1!</h1>
+      <h1>Welcome to Bobacisions!</h1>
 
       <img
         src="pixelboba.png"
@@ -20,7 +23,8 @@
       />
 
       <p>
-        Enter your favorite drink from your favorite chain and find similar matches!
+        Need help trying a new item? <br>
+        Enter your favorite drink from your favorite boba bar and find similar matches!
       </p>
     </div>
 
@@ -40,7 +44,7 @@
         placeholder="Enter drink"
       />
 
-      <h3>Filter by Tags</h3>
+      <h4>Filter by Tags</h4>
 
       <div id="tagFilters">
 
@@ -76,19 +80,19 @@
         <label><input type="checkbox" value="tropical"> Tropical</label>
         <label><input type="checkbox" value="honeyed"> Honeyed</label>
 
-        <h4>Taste Characteristics</h4>
+        <h4>Tastes...</h4>
         <label><input type="checkbox" value="earthy"> Earthy</label>
         <label><input type="checkbox" value="smoky"> Smoky</label>
-        <label><input type="checkbox" value="roasted-toasty"> Roasted / Toasty</label>
+        <label><input type="checkbox" value="roasted-toasty"> Roasted</label>
         <label><input type="checkbox" value="malty"> Malty</label>
-        <label><input type="checkbox" value="vegetal-grassy"> Vegetal / Grassy</label>
+        <label><input type="checkbox" value="vegetal-grassy"> Grassy</label>
         <label><input type="checkbox" value="warm-spiced"> Warm Spiced</label>
         <label><input type="checkbox" value="bittersweet"> Bittersweet</label>
         <label><input type="checkbox" value="tart"> Tart</label>
         <label><input type="checkbox" value="bold"> Bold</label>
         <label><input type="checkbox" value="delicate"> Delicate</label>
 
-        <h4>Texture</h4>
+        <h4>Texture Profile</h4>
         <label><input type="checkbox" value="creamy"> Creamy</label>
         <label><input type="checkbox" value="velvety-foam"> Velvety Foam</label>
         <label><input type="checkbox" value="salty-milk-foam"> Salty Milk Foam</label>
@@ -99,7 +103,7 @@
         <label><input type="checkbox" value="frothy"> Frothy</label>
         <label><input type="checkbox" value="juicy"> Juicy</label>
 
-        <h4>Overall Style</h4>
+        <h4>Other tags</h4>
         <label><input type="checkbox" value="balanced"> Balanced</label>
         <label><input type="checkbox" value="rich-indulgent"> Rich & Indulgent</label>
         <label><input type="checkbox" value="best-selling"> Best Selling</label>
@@ -108,10 +112,14 @@
 
       </div>
 
+
+
       <div id="errorMessage"></div>
 
-      <button id="randomBtn">
-        PICK A RANDOM BOBA!
+      <div class="button-row">
+
+      <button id="randomBtn" type="button">
+        Not Sure? Pick a Random Boba!
       </button>
 
       <button id="clearFiltersBtn" type="button">
