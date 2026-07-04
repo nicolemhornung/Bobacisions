@@ -110,16 +110,18 @@
   }
 
   table {
-    width: 80%;
+    width: 100%;
     background: white;
     border-collapse: collapse;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: keep-all;
-    font-size: 15px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    table-layout: fixed;
   }
+
 
   th {
     background: var(--accent-light);
@@ -231,12 +233,12 @@
 
 
 /* Mobile version */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .random-table th,
     .random-table td,
     .table th,
     .table td {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       padding: 6px;
     }
   }
