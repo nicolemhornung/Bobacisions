@@ -333,7 +333,7 @@ function renderResults(matches) {
     <thead>
       <tr>
         <th>Drink</th>
-        <th>Chain</th>
+        <th>Bar</th>
         <th>Series</th>
         <th>%</th>
       </tr>
