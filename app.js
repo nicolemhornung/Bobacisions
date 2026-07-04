@@ -328,6 +328,7 @@ function renderResults(matches) {
   title.textContent = "Your Personalized Menu:";
 
   const table = document.createElement("table");
+  table.className = "random-table";
 
   table.innerHTML = `
     <thead>
