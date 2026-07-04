@@ -113,6 +113,9 @@
     width: 100%;
     background: white;
     border-collapse: collapse;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   th {
@@ -158,15 +161,28 @@
   }
 
   #randomBtn {
-    background: #d18ba1;
+    background: #f6acc4;
+    color: black;
+
   }
 
   #randomBtn:hover {
-    background: #97576b;
+    background: #bd8194;
   }
 
   #clearFiltersBtn {
     background: #e8e8e8;
+    color: black;
+  }
+
+  #searchBtn {
+    background: #ffa5e2;
+    color: black;
+  }
+
+  #searchBtn:hover {
+    background: #996388;
+    color: black;
   }
 
   #clearFiltersBtn:hover {
@@ -230,13 +246,12 @@
   padding: 12px;
 }
 
+/* Keeps long drink names from changing layout */
 .random-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-/* Keeps long drink names from changing layout */
-.random-table td {
-  white-space: nowrap;
 }
