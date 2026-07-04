@@ -115,7 +115,7 @@
     border-collapse: collapse;
     white-space: normal;
     overflow-wrap: anywhere;
-    word-break: break-word;
+    word-break: keep-all;
     font-size: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -231,11 +231,15 @@
 
 
 /* Mobile version */
-@media (max-width: 900px) {
-  .main-layout {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    .random-table th,
+    .random-table td,
+    .table th,
+    .table td {
+      font-size: 0.8rem;
+      padding: 6px;
+    }
   }
-}
 
 .random-table {
   width: 100%;
@@ -255,7 +259,7 @@
 .random-table td {
   white-space: normal;
   overflow-wrap: anywhere;
-  word-break: break-word;
+  word-break: keep-all;
   height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
