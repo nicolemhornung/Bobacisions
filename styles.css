@@ -110,12 +110,15 @@
   }
 
   table {
-    width: 100%;
+    width: 80%;
     background: white;
     border-collapse: collapse;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   th {
@@ -135,10 +138,10 @@
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
   }
 
   #tagFilters h4 {
@@ -210,8 +213,10 @@
 .button-row {
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  width: 100%;
+  gap: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-row button {
