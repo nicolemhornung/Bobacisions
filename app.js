@@ -325,7 +325,7 @@ function renderResults(matches) {
 
   const title = document.createElement("h2");
   title.className = "results-title";
-  title.textContent = "Your Personalized, Curated Menu:";
+  title.textContent = "Your Personalized Menu:";
 
   const table = document.createElement("table");
 
