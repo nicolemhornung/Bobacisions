@@ -231,13 +231,18 @@
   margin-top: 15px;
 }
 
+@media (max-width: 900px) {
+  table th,
+  table td {
+    font-size: 0.6rem;
+    padding: 6px;
+  }
+}
 
 /* Mobile version */
 @media (max-width: 900px) {
     .random-table th,
-    .random-table td,
-    .table th,
-    .table td {
+    .random-table td {
       font-size: 0.6rem;
       padding: 6px;
     }
